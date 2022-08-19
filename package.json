@@ -1,0 +1,23 @@
+{
+  "name": "js-beginner-to-pro-in-ts",
+  "version": "1.0.0",
+  "description": "Working thru the book but using Typescript not JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hamberfim/js-beginner-to-pro-in-ts.git"
+  },
+  "author": "Hamberfim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hamberfim/js-beginner-to-pro-in-ts/issues"
+  },
+  "homepage": "https://github.com/Hamberfim/js-beginner-to-pro-in-ts#readme",
+  "devDependencies": {
+    "@types/node": "^18.7.7",
+    "typescipt": "^1.0.0"
+  }
+}
