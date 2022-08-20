@@ -56,7 +56,7 @@ const sportOutlet: Company = {
   established: 1985,
 };
 
-// concatinate marketActivity into a new string for output
+// concatenate marketActivity into a new string for output
 let newMarketString = (() => {
   let concatMarketString = "";
   for (let i = 0; i < sportOutlet.marketActivity.length; i++) {
