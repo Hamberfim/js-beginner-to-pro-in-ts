@@ -74,6 +74,7 @@ console.log(); // space in output
 // console.log(
 //   `${sportOutlet.comapanyName} (${sportOutlet.marketActivity[0]}, ${sportOutlet.marketActivity[1]}, ${sportOutlet.marketActivity[2]}), Established ${sportOutlet.established}`
 // );
+
 console.log(`${sportOutlet.comapanyName} (${newMarketString}), Established ${sportOutlet.established}`);
 console.log(
   `${sportOutlet.address.streetNumber} ${sportOutlet.address.street}, ${sportOutlet.address.city}, ${sportOutlet.address.state} ${sportOutlet.address.zipcode}`
