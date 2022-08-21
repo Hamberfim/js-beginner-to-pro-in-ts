@@ -16,24 +16,24 @@ let inventory: Inventory = {
 };
 
 // create three items, each have properties of name, model/type of product, cost, quantity
-const pizza = {
+const pizza: Product = {
   name: "Tony's Pizza",
   model: "Frozen",
   cost: 3.99,
   quantity: 25,
 };
 
-const tea = {
+const tea: Product = {
   name: "Ginger Tea",
   model: "individual tea bags",
   cost: 6.99,
   quantity: 56,
 };
 
-const pop = {
+const pop: Product = {
   name: "Oli-Pop",
   model: "Orange Cream",
-  cost: 2.99,
+  cost: 1.99,
   quantity: 48,
 };
 
@@ -47,7 +47,7 @@ for (const iterator of inventory.products) {
 
 // access elements of the 3rd item and log to console,
 console.log(
-  `We have ${inventory.products[2].quantity} ${inventory.products[2].name} ${
+  `We have ${inventory.products[2].quantity} cans of ${inventory.products[2].name} ${
     inventory.products[2].model
-  } soda at $${inventory.products[2].cost.toFixed(2)} `
+  } soda at $${inventory.products[2].cost.toFixed(2)} each`
 );
