@@ -1,2 +1,2 @@
-### JavaScript from Beginner to Professional in Typescript
+### JavaScript from Beginner to Professional (but using Typescript)
 Going thru the JS Beginner to pro book but using Typescript
