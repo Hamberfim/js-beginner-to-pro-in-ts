@@ -1,3 +1,4 @@
+// an array of strings
 let shoppingList: string[] = [];
 
 // populate array

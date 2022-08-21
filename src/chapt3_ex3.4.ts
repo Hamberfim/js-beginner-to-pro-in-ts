@@ -25,7 +25,7 @@ console.log(myFord.color); // blue
 let newColor = "Green";
 myFord.color = newColor;
 console.log(myFord.color); // green
-myFord.color = "Pink";
+myFord.color = "white";
 console.log(myFord.color); // pink
 
 myFord.isForSale = true;

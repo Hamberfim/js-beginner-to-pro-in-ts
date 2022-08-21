@@ -1,4 +1,4 @@
-// objects in objects - migrate to class or interface in TS
+// Chapt 3 objects in objects - migrate to class or interface in TS
 const company = {
   comapanyName: "Healthy Candy",
   marketActivity: "Food Manufacturing",
