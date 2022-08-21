@@ -1,5 +1,5 @@
-// objects in objects - migrate to class or interface in ts
-let company = {
+// objects in objects - migrate to class or interface in TS
+const company = {
   comapanyName: "Healthy Candy",
   marketActivity: "Food Manufacturing",
   address: {
@@ -12,6 +12,7 @@ let company = {
   established: 2022,
 };
 
+// migration to interface TS
 interface Company {
   comapanyName: string;
   marketActivity: string[];
@@ -25,6 +26,7 @@ interface Company {
   established: number;
 }
 
+// create an instance
 const healthyCandy: Company = {
   comapanyName: "Healthy Candy",
   marketActivity: ["Food Manufacturing"],
@@ -38,11 +40,13 @@ const healthyCandy: Company = {
   established: 2022,
 };
 
+// display
 console.log(`${healthyCandy.comapanyName} (${healthyCandy.marketActivity}), Established ${healthyCandy.established}`);
 console.log(
   `${healthyCandy.address.streetNumber} ${healthyCandy.address.street}, ${healthyCandy.address.city}, ${healthyCandy.address.state} ${healthyCandy.address.zipcode}`
 );
 
+// create an instance
 const sportOutlet: Company = {
   comapanyName: "BIG A Athletics",
   marketActivity: ["Gym Equipment", "Sports Gear", "Sports Wear"],
@@ -57,25 +61,41 @@ const sportOutlet: Company = {
 };
 
 // concatenate marketActivity into a new string for output
-let newMarketString = (() => {
-  let concatMarketString = "";
-  for (let i = 0; i < sportOutlet.marketActivity.length; i++) {
-    if (i < sportOutlet.marketActivity.length - 1) {
-      concatMarketString += sportOutlet.marketActivity[i] + ", ";
+// let newMarketString: string = (() => {
+//   let concatMarketString: string = "";
+//   for (let i = 0; i < sportOutlet.marketActivity.length; i++) {
+//     if (i < sportOutlet.marketActivity.length - 1) {
+//       concatMarketString += sportOutlet.marketActivity[i] + ", ";
+//     } else {
+//       concatMarketString += sportOutlet.marketActivity[i];
+//     }
+//   }
+//   return concatMarketString;
+// })();
+
+// make newMarkeyString a function to call
+function newMarketStr(arr: string[]): string {
+  let concatMarketString: string = "";
+  for (let i = 0; i < arr.length; i++) {
+    if (i < arr.length - 1) {
+      concatMarketString += arr[i] + ", ";
     } else {
-      concatMarketString += sportOutlet.marketActivity[i];
+      concatMarketString += arr[i];
     }
   }
   return concatMarketString;
-})();
+}
 
 console.log(); // space in output
 
 // console.log(
 //   `${sportOutlet.comapanyName} (${sportOutlet.marketActivity[0]}, ${sportOutlet.marketActivity[1]}, ${sportOutlet.marketActivity[2]}), Established ${sportOutlet.established}`
 // );
+// console.log(`${sportOutlet.comapanyName} (${newMarketString}), Established ${sportOutlet.established}`);
 
-console.log(`${sportOutlet.comapanyName} (${newMarketString}), Established ${sportOutlet.established}`);
+console.log(
+  `${sportOutlet.comapanyName} (${newMarketStr(sportOutlet.marketActivity)}), Established ${sportOutlet.established}`
+);
 console.log(
   `${sportOutlet.address.streetNumber} ${sportOutlet.address.street}, ${sportOutlet.address.city}, ${sportOutlet.address.state} ${sportOutlet.address.zipcode}`
 );
