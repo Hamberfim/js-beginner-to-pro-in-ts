@@ -1,5 +1,6 @@
 // create two variables with a boolean value, log to console
 let isHotOven = true;
+console.log(isHotOven);
 
 // check if value is true and output a message to the console
 if (isHotOven) {
