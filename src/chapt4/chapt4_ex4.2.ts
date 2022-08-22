@@ -1,4 +1,4 @@
-// Node/TS wont use prompt - creat a readline
+// Node/TS wont use prompt - create a readline
 //////// javascript ///////// import * as readline from "readline";  /////////////
 var readline = require("readline");
 // create the readline interface
