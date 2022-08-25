@@ -4,7 +4,7 @@
  * Created      : 08/24/2022
  * Version      : 1.0
  * OS           : Windows 10
- * Lang         : Typescript
+ * Lang         : Typescript (migration from C#)
  * IDE          : Visual Studio Code
  * Copyright    : 2022
  * Description  : This program calculates a total bill for two meals at a restaurant, then divides the check between the individuals.
