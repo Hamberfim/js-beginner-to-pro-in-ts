@@ -1,5 +1,5 @@
 // Generate a Nested Loop Table - create an empty array myTable
-let myTable = [];
+let myTable: number[][] = [];
 
 // set some const/final variable for the numer of rows/columns
 const rows: number = 5;
