@@ -6,7 +6,7 @@
 // };
 // create a simple object with multiple items
 let monitorDell: any = {
-  // any required because of the use of a 'for in'
+  // any is required because of the use of a 'for in'
   make: "Dell",
   model: "S2340M",
   screenSize: "23 inches",
