@@ -27,3 +27,16 @@ for (const property in monitorDell) {
 for (let index = 0; index < monitorArray.length; index++) {
   console.log(monitorArray[index]);
 }
+console.log();
+
+// converting object to arrays - any is required because of the use of the loop
+let car: any = {
+  model: "golf",
+  make: "volkswagen",
+  year: 1999,
+  color: "black",
+};
+let carKeysArr: string[] = Object.keys(car);
+for (let i = 0; i < carKeysArr.length; i++) {
+  console.log(`${carKeysArr[i]}: ${car[carKeysArr[i]]}`);
+}
