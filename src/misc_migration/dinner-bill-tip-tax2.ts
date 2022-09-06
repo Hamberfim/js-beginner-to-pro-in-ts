@@ -36,13 +36,9 @@ let dessert1 = 0;
 let dessert2 = 0;
 
 function calculateSubtotal(meal1: number, meal2: number, dessert1: number, dessert2: number): number {
-  if (
-    typeof meal1 === "string" ||
-    typeof meal2 === "string" ||
-    typeof dessert1 === "string" ||
-    typeof dessert2 === "string"
-  ) {
-    subtotal = 0;
+  if (isNaN(meal1) || isNaN(meal2) || isNaN(dessert1) || isNaN(dessert2)) {
+    console.log("ERROR: User input must be valid numbers. Application exiting.");
+    process.exit(1);
   } else {
     subtotal = meal1 + meal2 + dessert1 + dessert2;
   }
