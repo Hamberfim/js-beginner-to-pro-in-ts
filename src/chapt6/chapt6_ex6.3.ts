@@ -30,7 +30,7 @@ determineCalcOp(4, 3, "-");
 const arr: string[] = ["pIZZA", "cAKE", "mILK", "bUTTER", "bREAD"];
 arr.forEach((element) => console.log(element.charAt(0).toUpperCase() + element.substring(1).toLowerCase()));
 
-// spread operator
+// spread operator - used when calling a function
 let newArr: string[] = [...arr, "iCE CREAM", "sODA", "tOOTHPASTE"];
 console.log(newArr);
 
@@ -43,3 +43,13 @@ function addNums(...args: number[]): void {
 }
 let numArr = [6, 7, 9, 11, 5];
 addNums(...numArr);
+addNums(...numArr, ...numArr, ...numArr);
+
+// rest parameter - used inside a function as a parameter ( rest parameter must be type of any)
+// '...param2: any' is a rest parameter
+function yourEcho(param1: string, ...param2: any) {
+  console.log(param1, param2); // param2 will print as an array
+  console.log(param1, ...param2); // '...param2' is a spread operator
+}
+yourEcho("Hi", "Hello");
+yourEcho("Greetings", "Salutations", "Welcome", "Give me potato chips!");
