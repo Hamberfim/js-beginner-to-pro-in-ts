@@ -13,25 +13,26 @@
 })(7, 8);
 
 // testing the variable scope of an IIFE
-let oneThousand = "1000";
+let oneThousand: string | number = "1000";
 console.log("Outside: " + oneThousand);
 (function () {
-  oneThousand = "pizza";
+  oneThousand = 1000;
   console.log("Inside: " + oneThousand);
 })();
 console.log("Outside: " + oneThousand);
 
 let result = (function () {
-  let oneDollar = 1.0;
+  let oneDollar: string | number = 1.0;
   return oneDollar;
 })();
-console.log("Returned: " + result.toFixed(2));
+console.log("Returned: $" + result.toFixed(2));
 // console.log(oneDollar);  // Cannot find name 'oneDollar'.
 
 (function (value) {
   console.log("Inside: " + value);
 })("Ham Sandwich");
 
+console.log();
 // recursive function  - a regular iteration of a loop has better preformance
 function recursiveNumber(num: number) {
   if (num >= 0) {
