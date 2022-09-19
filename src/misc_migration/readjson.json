@@ -1,0 +1,53 @@
+{
+  "Users": [
+    {
+      "name": "Ben Smith",
+      "email": "ben@fakeemail.org",
+      "jobTitle": "Logistics Manager",
+      "phone": "5559991111",
+      "imageUrl": "https://bootdey.com/img/Content/avatar/avatar1.png"
+    },
+    {
+      "name": "David Davidson",
+      "email": "dave@fakeemail.org",
+      "jobTitle": "Production Manager",
+      "phone": "5559992222",
+      "imageUrl": "https://bootdey.com/img/Content/avatar/avatar2.png"
+    },
+    {
+      "name": "Pam Pamwoski",
+      "email": "pam@fakeemail.org",
+      "jobTitle": "Marketing Manager",
+      "phone": "5559993333",
+      "imageUrl": "https://bootdey.com/img/Content/avatar/avatar3.png"
+    },
+    {
+      "name": "John Johnson",
+      "email": "john@fakeemail.org",
+      "jobTitle": "Distribution Manager",
+      "phone": "5559994444",
+      "imageUrl": "https://bootdey.com/img/Content/avatar/avatar4.png"
+    },
+    {
+      "name": "Larry Little",
+      "email": "larry@fakeemail.org",
+      "jobTitle": "Communications Manager",
+      "phone": "5559995555",
+      "imageUrl": "https://bootdey.com/img/Content/avatar/avatar5.png"
+    },
+    {
+      "name": "Sarah Sanderson",
+      "email": "sarah@fakeemail.org",
+      "jobTitle": "Graphic Artist",
+      "phone": "5559996666",
+      "imageUrl": "https://bootdey.com/img/Content/avatar/avatar8.png"
+    },
+    {
+      "name": "Rick Richman",
+      "email": "rich@fakeemail.org",
+      "jobTitle": "Office Manager",
+      "phone": "5559997777",
+      "imageUrl": "https://bootdey.com/img/Content/avatar/avatar7.png"
+    }
+  ]
+}

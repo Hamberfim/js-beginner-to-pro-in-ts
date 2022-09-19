@@ -1,0 +1,8 @@
+Hello JavaScript
+Hello Typescript
+Good-bye Java
+Good-bye Python
+Give Me Pizza
+Give Me Cake
+Take a Breath
+Leave a Penney
