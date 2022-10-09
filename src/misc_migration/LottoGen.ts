@@ -21,7 +21,7 @@ function PowerBall() {
   for (let i = 0; i < MAX_NUMBERS; i++) {
     let randNumber = Math.floor(Math.random() * (MAX - MIN + 1));
     fiveRandPlusPowerBall.push(randNumber);
-    // process.stdout.write(` ${randNumber} `);
+    // process.stdout.write(` ${randNumber} `); // check values
   }
   return fiveRandPlusPowerBall;
 }
@@ -33,7 +33,8 @@ for (let i = 0; i < lottoNumber.length; i++) {
   if (i < lottoNumber.length - 1) {
     process.stdout.write(`  ${lottoNumber[i]}`);
   } else {
-    process.stdout.write(`  POWERBALL: ${lottoNumber[i]}`);
+    // add 5 to last index for a POWERRBALL NUMBER
+    process.stdout.write(`  POWERBALL: ${lottoNumber[i] + 5}`);
   }
 }
 console.log("\n======== Your Lotto Numbers ========");
