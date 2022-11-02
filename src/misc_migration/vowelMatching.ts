@@ -1,5 +1,11 @@
 let vowelMatching = (inputStr: string) => {
-  console.log(inputStr.match(/[aeiou]/gi));
+  let result = inputStr.match(/[aeiou]/gi);
+  if (result == null || result == undefined) {
+    console.log("Sorry, No Match");
+  } else {
+    console.log(result);
+  }
 };
 vowelMatching("hello");
 vowelMatching("mississippi");
+vowelMatching("sky");
