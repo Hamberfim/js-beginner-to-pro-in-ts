@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="Anthony Hamlin" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <div class="main">
+      <div>
+        <ul>
+          <li id="one">One</li>
+          <li id="two">Two</li>
+          <li id="three">Three</li>
+        </ul>
+      </div>
+      <div id="blue">blue</div>
+      <div id="green">green</div>
+      <div id="yellow">yellow</div>
+      <div id="Purple">Purple</div>
+    </div>
+    <script>
+      // traverse the DOM
+      console.dir(document);
+      console.dir(document.body);
+      console.dir(document.body.children); // body > HTMLCollection -- all the html elements of the page
+      console.dir(document.body.children[0]); // body > div.main
+      console.dir(document.body.children[1]); // body > script -- this area where we call console.dir()
+
+      console.dir(document.body.children[0].children[0]); // body > div.main > div
+      console.dir(document.body.children[0].children[0].children[0]); // body > div.main > div > ul
+      console.dir(document.body.children[0].children[0].children[0].children[0]); // body > div.main > div > ul > li#one
+      console.dir(document.body.children[0].children[0].children[0].children[1]); // body > div.main > div > ul > li#two
+      console.dir(document.body.children[0].children[0].children[0].children[2]); // body > div.main > div > ul > li#three
+
+      console.dir(document.body.children[0].children[1]); // body > div.main > div#blue
+      console.dir(document.body.children[0].children[2]); // body > div.main > div#green
+      console.dir(document.body.children[0].children[3]); // body > div.main > div#yellow
+      console.dir(document.body.children[0].children[4]); // body > div.main > div#yellow
+    </script>
+  </body>
+</html>
