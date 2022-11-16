@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="Anthony Hamlin" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>Traverse the DOM</title>
+  </head>
+  <body>
+    <h1>Let's find treasure</h1>
+    <p>We can use ' console.dir(document.body); ' to navigate the DOM in the console</p>
+    <p>
+      Using 'children':
+      <br />
+      console.dir(document.body.children.forest.children.tree2.children.shrubbery.children.treasure);
+    </p>
+    <p>ChildNodes returns addition things like text and comment nodes.</p>
+    <p>console.dir(document.body.childNodes[3]);</p>
+    <p>They can also be combined or in reverse.</p>
+    <p>console.dir(document.body.children.forest.children.tree1.parentElement); <-- forest is the parentElement to tree1</p>
+    <p>console.dir(document.body.children.forest.children.tree2.previousElementSibling); <-- tree1 is the previousElementSibling</p>
+    <p>console.dir(document.body.children.forest.children.tree1.nextElementSibling); <-- tree2 is the nextElementSibling</p>
+    <div id="forest">
+      forest
+      <div id="tree1">
+        &nbsp;tree1
+        <div id="squirrel">&nbsp;&nbsp;&nbsp;squirrel</div>
+        <div id="flower">&nbsp;&nbsp;&nbsp;flower</div>
+      </div>
+      <div id="tree2">
+        &nbsp;tree2
+        <div id="shrubbery">
+          &nbsp;&nbsp;shrubbery
+          <div id="treasure">&nbsp;&nbsp;&nbsp;treasure</div>
+        </div>
+        <div id="mushroom">
+          &nbsp;mushroom
+          <div id="bug">&nbsp;&nbsp;bug</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
