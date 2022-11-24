@@ -1,4 +1,4 @@
-// Method overloading - four signatures - probably should us type of / type guard /narrowing of type
+// Method overloading - four signatures - probably should use type of / type guard for narrowing of type
 function add(prop1: number, prop2: number, prop3: number): number;
 
 function add(prop1: string, prop2: string, prop3: string): string;
