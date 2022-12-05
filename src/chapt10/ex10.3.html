@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="Anthony Hamlin" />
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+    <title>Document</title>
+    <script></script>
+  </head>
+  <body>
+    <h1>Access elements by tag name</h1>
+    <div id="divOne"><h2>One div</h2></div>
+    <div id="divTwo"><h3>Two div</h3></div>
+    <div id="divThree"><h4>Three div</h4></div>
+    <script>
+      // console.log(document.getElementsByTagName("div").item(0)); // zero index
+      let divTagsArr = [];
+      divTagsArr[0] = document.getElementsByTagName("div").item(0);
+      divTagsArr[1] = document.getElementsByTagName("div").item(1);
+      divTagsArr[2] = document.getElementsByTagName("div").item(2);
+      console.log("Middle div tag:", divTagsArr[1]);
+
+      let result = "Two div";
+      if (Math.random() > 0.5) {
+        result = "Hola!";
+      } else {
+        result = "Hej!";
+      }
+      document.getElementsByTagName("h3").item(0).innerText = result;
+      console.log(document.getElementsByTagName("h3").item(0));
+    </script>
+  </body>
+</html>

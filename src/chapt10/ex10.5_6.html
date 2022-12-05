@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="Anthony Hamlin" />
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 15px;
+      }
+
+      p {
+        padding: 2px 4px;
+        margin-bottom: 1px;
+      }
+    </style>
+    <title>Document</title>
+    <script></script>
+  </head>
+  <body>
+    <h3>Accessing Elements in the DOM by querySelector()</h3>
+    <div id="one" class="example">One</div>
+    <div id="two" class="example">Two</div>
+    <div id="three" class="example">Three</div>
+    <div id="four" class="example">Four</div>
+    <div id="five" class="example">Five</div>
+    <div id="six" class="example">Six</div>
+
+    <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <script>
+      console.log("Returns the first", typeof document.querySelector("div"), document.querySelector("div"));
+      console.log("Returns a specific", document.querySelector("#one"));
+      console.log("Returns the first", document.querySelector(".example"));
+      console.log("Returns a very specific", document.querySelector("#one.example"));
+
+      console.log("Returns all", typeof document.querySelectorAll("div"), document.querySelectorAll("div"));
+      console.log("Returns all", document.querySelectorAll(".example"));
+      console.log("Returns a very specific", document.querySelectorAll("#six.example"));
+
+      // get all paragraph tags - return is an html collection object with a zero index
+      let allParas = document.querySelectorAll("p");
+      // console.log(allParas);
+      allParas.forEach((element) => {
+        element.style.backgroundColor = "silver";
+      });
+    </script>
+  </body>
+</html>

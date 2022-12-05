@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="Anthony Hamlin" />
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 15px;
+      }
+    </style>
+    <title>Document</title>
+    <script></script>
+  </head>
+  <body>
+    <h3>Accessing Elements in the DOM by class name</h3>
+    <div id="one" class="example">One</div>
+    <div id="two" class="example">Two</div>
+    <div id="three" class="example">Three</div>
+    <script>
+      console.log("By Class Name:", typeof document.getElementsByClassName("example"), document.getElementsByClassName("example")); // returns an html collection object of matching items
+
+      let exampleClasses = document.getElementsByClassName("example");
+      let exampleArr = [];
+      exampleArr[0] = document.getElementsByClassName("example").item(0);
+      exampleArr[1] = document.getElementsByClassName("example").item(1);
+      exampleArr[2] = document.getElementsByClassName("example").item(2);
+      console.log(exampleArr);
+
+      // loop add to array
+      let arrayEx = [];
+      for (let index = 0; index < exampleClasses.length; index++) {
+        arrayEx.push(exampleClasses[index]);
+      }
+      console.log("arrayEx", arrayEx);
+
+      console.log(document.getElementsByClassName("example").item(0));
+
+      // get the element by both it's 'id' and 'class name'
+      console.log(document.querySelector("#two.example"));
+    </script>
+  </body>
+</html>
