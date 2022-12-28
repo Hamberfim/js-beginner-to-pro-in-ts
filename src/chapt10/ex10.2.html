@@ -23,18 +23,17 @@
       Hi 3!
       <p id="innerGreeting">Hi Inner 3!</p>
     </div>
+
+    <h3>Accessing Elements in the DOM</h3>
+    <div id="one" class="example">One</div>
+    <div id="two" class="example">Two</div>
+    <div id="three" class="other">Three</div>
     <script>
       console.log(document.body.children.greeting1);
       // document.body.children.greeting1.innerText = "Bye!";
       // document.body.children.greeting1.innerHTML = "<strong>Bye!</strong>";
       console.log(document.body.children.greeting3.children);
       //document.body.children.greeting3.children.innerGreeting.innerText = "I'm Here";
-    </script>
-    <h3>Accessing Elements in the DOM</h3>
-    <div id="one" class="example">One</div>
-    <div id="two" class="example">Two</div>
-    <div id="three" class="other">Three</div>
-    <script>
       console.log("One:", document.getElementById("one"));
       console.log("Two:", document.getElementById("two"));
       console.log("Three:", document.getElementById("three"));
