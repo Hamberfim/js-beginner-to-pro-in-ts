@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="Anthony Hamlin" />
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 15px;
+      }
+
+      p {
+        padding: 2px 4px;
+        margin-bottom: 1px;
+      }
+
+      div {
+        height: 30px;
+        width: 30px;
+        background-color: white;
+      }
+    </style>
+    <title>Manipulate Element Style</title>
+    <script>
+      // toggle display
+      function toggleDisplay() {
+        const pDisplay = document.querySelector("#magic");
+        if (pDisplay.style.display === "none") {
+          pDisplay.style.display = "block";
+        } else {
+          pDisplay.style.display = "none";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <p id="magic" display="none">I can disappear and appear.</p>
+    <p><button onclick="toggleDisplay()">Hey Presto!</button></p>
+    <br />
+    <script>
+      // rainbow if y
+      let divs = document.getElementsByTagName("div");
+      let isColored = false;
+      function rainbowify() {
+        console.log("in func");
+        if (isColored === false) {
+          for (let i = 0; i < divs.length; i++) {
+            console.log("in color loop");
+            divs[i].style.backgroundColor = divs[i].id;
+            isColored = true;
+            console.log("isColored", isColored);
+          }
+        } else {
+          for (let i = 0; i < divs.length; i++) {
+            console.log("in color none");
+            divs[i].style.backgroundColor = "white";
+            isColored = false;
+            console.log("isColored", isColored);
+          }
+        }
+      }
+    </script>
+    <div id="red"></div>
+    <div id="orange"></div>
+    <div id="yellow"></div>
+    <div id="green"></div>
+    <div id="blue"></div>
+    <div id="indigo"></div>
+    <div id="violet"></div>
+    <p><button onclick="rainbowify()">Make Me a Rainbow!</button></p>
+  </body>
+</html>

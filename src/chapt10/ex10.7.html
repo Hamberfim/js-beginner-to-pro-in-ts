@@ -15,17 +15,20 @@
     <script>
       // onclick message function for buttons - returns the element clicked
       function clickedMessage(el) {
+        const whichButton = document.querySelector("#whichButton");
         // console.dir(el.textContent, el);
         console.dir(el.textContent);
+        document.querySelector("#whichButton").innerHTML = `You clicked ${el.textContent}.`;
       }
     </script>
   </head>
   <body>
     <div>
       <p>
-        <button id="button1" onclick="clickedMessage(this)">Button1</button>
-        <button id="button2" onclick="clickedMessage(this)">Button2</button>
+        <button id="button1" onclick="clickedMessage(this)">Button 1</button>
+        <button id="button2" onclick="clickedMessage(this)">Button 2</button>
       </p>
+      <p id="whichButton"></p>
     </div>
     <script></script>
   </body>
