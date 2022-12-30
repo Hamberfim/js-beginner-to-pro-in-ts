@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="Anthony Hamlin" />
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 15px;
+      }
+
+      p {
+        padding: 2px 4px;
+        margin-bottom: 1px;
+      }
+
+      .hide {
+        display: none;
+      }
+
+      .square {
+        height: 100px;
+        width: 100px;
+        background-color: yellow;
+      }
+
+      .square.blue {
+        background-color: blue;
+      }
+    </style>
+
+    <title>Add class to an element</title>
+  </head>
+  <body>
+    <div id="shape" class="square blue"></div>
+    <script>
+      // toggle box display
+      function disappear() {
+        document.querySelector("#shape").classList.toggle("hide");
+
+        isVis = document.querySelector("#shape").classList;
+        isVis.forEach(function (cls, index) {
+          console.log(index + " " + cls);
+        });
+      }
+    </script>
+    <p><button onclick="disappear()">Disappear!</button></p>
+  </body>
+</html>
