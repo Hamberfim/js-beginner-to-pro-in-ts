@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="Anthony Hamlin" />
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 15px;
+      }
+
+      div {
+        height: 100px;
+        width: 100px;
+      }
+
+      .square {
+        background-color: yellow;
+        border: 2px solid red;
+      }
+
+      .circle {
+        border-radius: 50%;
+        background-color: red;
+        border: 2px solid black;
+      }
+    </style>
+    <title>Manipulate Attributes</title>
+  </head>
+  <body>
+    <div id="shape" class="square"></div>
+    <p><button onclick="changeAtt()">Change Attribute</button></p>
+    <script>
+      function changeAtt() {
+        let divEl = document.querySelector("#shape");
+        let divAtt = divEl.getAttribute("class");
+        console.log(divAtt);
+
+        if (divAtt === "square") {
+          divEl.setAttribute("class", "circle");
+        } else {
+          divEl.setAttribute("class", "square");
+        }
+      }
+    </script>
+  </body>
+</html>
