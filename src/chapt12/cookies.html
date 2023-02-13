@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Using cookies" />
+    <meta name="author" content="Anthony Hamlin" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <script>
+      function pageLoaded() {
+        // empty input form values
+        document.querySelector("#inputName").value = "";
+        document.querySelector("#inputColor").value = "";
+        document.querySelector("#inputAge").value = "";
+
+        // if cookie exist populate cookie display
+        if (document.cookie !== "") {
+          getCookie();
+        }
+      }
+    </script>
+    <title>Cookies</title>
+  </head>
+  <body onload="pageLoaded()">
+    <main class="container-fluid">
+      <div class="row">
+        <div class="col-md-4 mt-3 mb-1">
+          <p>
+            <!--<input class="form-control mb-1" type="text" onchange="setCookie(this)" id="inputName" aria-label="set a cookie" placeholder="Enter your name here." />-->
+            <input class="form-control mb-1" type="text" id="inputName" aria-label="set a cookie" placeholder="Enter your name here." />
+            <input class="form-control mb-1" type="text" id="inputColor" aria-label="set a cookie" placeholder="Enter a color here." />
+            <input class="form-control mb-2" type="text" id="inputAge" aria-label="set a cookie" placeholder="Enter your age here." />
+            <button class="btn btn-outline-primary btn-sm" onclick="setCookie()">Let's talk, cookies!</button>
+          </p>
+          <h3>Form input:</h3>
+          <p id="nameForm"></p>
+          <p id="colorForm"></p>
+          <p id="ageForm"></p>
+        </div>
+        <div class="col-md-8 mt-3 mb-1">
+          <div class="card">
+            <div class="card-body bg-light">
+              <h3 class="text-primary">Existing Cookie Data:</h3>
+              <p class="text-primary" id="nameGreeting"></p>
+              <p class="text-primary" id="colorGreeting"></p>
+              <p class="text-primary" id="ageGreeting"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function setCookie() {
+        // gather user input
+        let inputName = document.querySelector("#inputName").value;
+        let inputColor = document.querySelector("#inputColor").value;
+        let inputAge = document.querySelector("#inputAge").value;
+
+        // set the cookie to expire in 1 minute
+        let cExpire = new Date();
+        cExpire.setMinutes(cExpire.getMinutes() + 1);
+
+        // display user form input && set cookies from user form
+        if (inputName.length != 0) {
+          document.querySelector("#nameForm").innerHTML = `<h5>Hi ${inputName}</h5>`;
+          document.cookie = "user=" + inputName + ";";
+        }
+
+        if (inputColor.length != 0) {
+          document.querySelector("#colorForm").innerHTML = `<h5>Your favorite color is ${inputColor}</h5>`;
+          document.cookie = "favoriteColor=" + inputColor + ";";
+        }
+
+        if (inputColor.length != 0) {
+          document.querySelector("#ageForm").innerHTML = `<h5>Your age is ${inputAge}</h5>`;
+          document.cookie = "age=" + inputAge + ";";
+          document.cookie = "expires=" + `${cExpire};`;
+        }
+        getCookie();
+      }
+
+      function getCookie() {
+        let cookie = decodeURIComponent(document.cookie);
+        let cookieList = cookie.split(";");
+        let user, color, age;
+        for (let index = 0; index < cookieList.length; index++) {
+          // console.log("Loop index", cookieList[index]);
+          if (cookieList[index].charAt(0) == " ") {
+            cookieList[index] = cookieList[index].trim();
+          }
+
+          if (cookieList[index].startsWith("user")) {
+            user = cookieList[index].substring(5, cookieList[index].length);
+            document.querySelector("#nameGreeting").innerHTML = `<h4>Hi ${user}</h4>`;
+          }
+
+          if (cookieList[index].startsWith("favoriteColor")) {
+            color = cookieList[index].substring(14, cookieList[index].length);
+            document.querySelector("#colorGreeting").innerHTML = `<h4>Your favorite color is ${color}</h4>`;
+          }
+
+          if (cookieList[index].startsWith("age")) {
+            age = cookieList[index].substring(4, cookieList[index].length);
+            document.querySelector("#ageGreeting").innerHTML = `<h4>Your age is ${age}</h4>`;
+          }
+        }
+      }
+      console.log("existing cookies", document.cookie);
+    </script>
+  </body>
+</html>
